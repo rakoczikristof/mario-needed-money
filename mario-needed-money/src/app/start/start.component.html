@@ -1,4 +1,33 @@
-<form>
+<!--form [formGroup] = "nameForm" (ngSubmit)="onSubmit()">
   <label for="name">Enter your name: </label>
+
+
+  <div class="success" *ngIf="success">form valid</div>
+
+  <input type="" formControlName="name">
+
+  <div *ngIf="submitted && nameForm.controls.name.errors.required" class="error">
+    name is required...
+  </div>
+
+  <input type="submit" value="submit">
   
 </form>>
+
+-->
+
+<form [formGroup]="nameForm" (ngSubmit)="obSubmit()">
+    <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" [formControl]="nameFormControl">
+
+        <mat-error *ngIf="nameFormControl.hasError('minlength') && !nameFormControl.hasError('required')">
+    		Your name should be more than <strong>{{minNameLength}}</strong> characters long!
+        </mat-error>
+        <mat-error *ngIf="nameFormControl.hasError('required')">
+         	Name is <strong>required</strong>
+        </mat-error>
+	</mat-form-field>
+	
+	<button mat-raised-button color="accent" type="submit">Start</button>
+</form>
