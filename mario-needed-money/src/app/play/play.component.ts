@@ -10,12 +10,20 @@ export class PlayComponent implements OnInit {
 
 	  playerName: string;
 
+	
+
 	constructor() {
 		this.playerName = JSON.parse(localStorage.getItem("name"));
-   		console.log("Player's name: %s", this.playerName);
+		console.log("Player's name: %s", this.playerName);
+		
+		localStorage.setItem("coins", JSON.stringify(15));
   	}
 
 	ngOnInit() {
+	}
+
+	setUpName() {
+
 	}
 
 }

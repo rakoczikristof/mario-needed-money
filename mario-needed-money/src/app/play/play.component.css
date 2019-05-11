@@ -1,6 +1,12 @@
-.example-card {
-	max-width: 350px;
+.gametype-card {
+	max-width: 200px;
 	align-items: center;
+	height: 500px;
+}
+
+.gametype-card:hover {
+	cursor: pointer;
+	background: lightgray;
 }
 
 .gametype-cards {

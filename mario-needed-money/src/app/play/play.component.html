@@ -3,27 +3,26 @@ Welcome {{playerName}}, Now you have to choose from the topics:
 
 <div class="gametype-cards">
 
-		<mat-card class="example-card">
+		<mat-card class="gametype-card" routerLink="/play/math">
 			<mat-card-header>
 				<div mat-card-avatar class="example-header-image"></div>
-				<mat-card-title>Shiba Inu</mat-card-title>
-				<mat-card-subtitle>Dog Breed</mat-card-subtitle>
+				<mat-card-title>Math</mat-card-title>
+				<mat-card-subtitle>Easy peasy</mat-card-subtitle>
 			</mat-card-header>
-			<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+			<img mat-card-image src="assets/images/mario_math.png" alt="Photo of a Shiba Inu">
 			<mat-card-content>
 				<p>
-					The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-					A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-					bred for hunting.
+					Mario went on a holiday, but some cruel monsters ruined his vacation, now he wants to take 
+					revenge! Help him destroy the monsters so he can get back to enjoy his freetime from
+					all that plumming.
 				</p>
 			</mat-card-content>
 			<mat-card-actions>
-				<button mat-button routerLink="/play/math">Play!</button>
-				<button mat-button>SHARE</button>
+				<!--<button mat-raised-button color="warn" routerLink="/play/math">PLAY!</button>-->
 			</mat-card-actions>
 		</mat-card>
 
-		<mat-card class="example-card">
+		<mat-card class="gametype-card">
 			<mat-card-header>
 				<div mat-card-avatar class="example-header-image"></div>
 				<mat-card-title>Shiba Inu</mat-card-title>
@@ -38,10 +37,28 @@ Welcome {{playerName}}, Now you have to choose from the topics:
 				</p>
 			</mat-card-content>
 			<mat-card-actions>
-				<button mat-button routerLink="/play/math">Play!</button>
-				<button mat-button>SHARE</button>
+				<button mat-raised-button color="warn" routerLink="/play/math">Play!</button>
 			</mat-card-actions>
 		</mat-card>
+
+		<mat-card class="gametype-card">
+				<mat-card-header>
+					<div mat-card-avatar class="example-header-image"></div>
+					<mat-card-title>Shiba Inu</mat-card-title>
+					<mat-card-subtitle>Dog Breed</mat-card-subtitle>
+				</mat-card-header>
+				<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+				<mat-card-content>
+					<p>
+						The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+						A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+						bred for hunting.
+					</p>
+				</mat-card-content>
+				<mat-card-actions>
+					<button mat-raised-button color="warn" routerLink="/play/math">Play!</button>
+				</mat-card-actions>
+			</mat-card>
 
 
 </div>
