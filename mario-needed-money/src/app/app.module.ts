@@ -9,6 +9,8 @@ import { StartComponent } from './start/start.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { PlayMathComponent } from './play-math/play-math.component';
+import { PlayComponent } from './play/play.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     AppComponent,
     StartComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    PlayMathComponent,
+    PlayComponent
   ],
   imports: [
     BrowserModule,

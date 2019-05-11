@@ -1,38 +1,47 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators, FormGroup, FormBuilder} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-start',
-  templateUrl: './start.component.html',
-  styleUrls: ['./start.component.css']
+	selector: 'app-start',
+	templateUrl: './start.component.html',
+	styleUrls: ['./start.component.css']
 })
 export class StartComponent implements OnInit {
-  minNameLength = 5;
+	minNameLength = 5;
+	router: Router;
 
-  nameForm: FormGroup;
-  nameFormControl = new FormControl('', [
-    Validators.required,
-    Validators.minLength(this.minNameLength)
-  ]);
+	nameForm: FormGroup;
+	nameFormControl = new FormControl('', [
+	Validators.required,
+		Validators.minLength(this.minNameLength)
+	]);
 
-  constructor(private formBuilder: FormBuilder) {
-    this.nameForm = this.formBuilder.group(this.nameFormControl);
-  }
+	constructor(private formBuilder: FormBuilder, _router: Router) {
+		this.nameForm = this.formBuilder.group(this.nameFormControl);
+		this.router = _router;
+	}
 
 
 
-  ngOnInit() {
+	ngOnInit() {
 
-  }
+	}
 
-  onSubmit() {
-    if(this.nameForm.invalid) {
-      return;
-    }
+	onSubmit() {
+		if(this.nameFormControl.invalid) {
+			return;
+		}
 
-    // TO-DO 
+		var inputName = this.nameFormControl.value;
 
-  }
+		localStorage.setItem("name", JSON.stringify(inputName));
+
+		console.log("Inputname: " + inputName);
+		console.log("Localstorage set!");
+
+		this.router.navigateByUrl('/play');
+	}
 
 
 
