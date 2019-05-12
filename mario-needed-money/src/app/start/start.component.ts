@@ -41,7 +41,6 @@ export class StartComponent implements OnInit {
 		console.log("Localstorage set!");
 
 		localStorage.setItem("coins", JSON.stringify(0));
-		
 		this.router.navigateByUrl('/play');
 	}
 

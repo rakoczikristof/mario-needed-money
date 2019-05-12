@@ -16,28 +16,28 @@ export class PlayReadingComponent implements OnInit {
 
   questions = [
     {
-      question: "How much is 1+4?",
-      optionA: "6",
-      optionB: "4+1",
-      optionC: "5.5",
-      optionD: "4.9",
-      solution: "4+1"
+      question: "How wrote the poem 'Shanzenize'?",
+      optionA: "I don't know",
+      optionB: "Shakespeare",
+      optionC: "Mike Tyson",
+      optionD: "Lady Gaga",
+      solution: "I don't know"
     },
     {
-      question: "How many corners does a triangle have?",
-      optionA: "none",
-      optionB: "infinite",
-      optionC: "lim(n+2)",
-      optionD: "3",
-      solution: "3"
+      question: "How many letters does the word 'apple' consist of?",
+      optionA: "4",
+      optionB: "5",
+      optionC: "This should be in the Math section.",
+      optionD: "3.14",
+      solution: "This should be in the Math section."
     },
     {
-      question: "How rich Mario will be in 10 years?",
-      optionA: "a little",
-      optionB: "very",
-      optionC: "dead",
-      optionD: "yes",
-      solution: "dead"
+      question: "How is the word 'dinner' spelled?",
+      optionA: "D I N N E L",
+      optionB: "D U N N E R",
+      optionC: "D I N N E R",
+      optionD: "I'm analphabetic.",
+      solution: "D I N N E R"
     }
    
   ];
