@@ -20,7 +20,7 @@
 
 <form [formGroup]="nameForm" (ngSubmit)="onSubmit()">
 		<h1>It's-a me, Mario!</h1>
-		It's-a good thing you are here! I broke my dfuio dfu udfiu iodu ofd.
+		<br>
 		<input placeholder="Name" class="name-field" [formControl]="nameFormControl">
 			
 		<div class="error" *ngIf="nameFormControl.hasError('minlength') && !nameFormControl.hasError('required')">
