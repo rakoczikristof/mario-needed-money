@@ -1,0 +1,14 @@
+.radio-button {
+	display: block;
+	margin: 20px;
+}
+
+form button {
+	margin: 0 auto;
+	width: 200px;
+}
+
+.card {
+	margin: 0 auto;
+	width: 500px;
+}

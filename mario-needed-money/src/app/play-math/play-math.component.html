@@ -1,6 +1,65 @@
+<!--
+  <div class="">
+	feladat: {{exercises[0].exercise}} Megoldás: {{exercises[0].solution}}
+  </div>
+--
+  <div class="" *ngFor="let exercise of exercises">
+	feladat: {{exercise.exercise}} Megoldás: {{exercise.solution}}
+   
+  </div>
+
+  <div class="" *ngFor="let exercise of exercises">
+	feladat: {{exercise.exercise}} Megoldás: {{exercise.solution}}
+   
+  </div>
+-->
+
+
+	<!--<mat-form-field appearance="outline">
+			<mat-label>Answer:</mat-label>
+			<input matInput placeholder="Name" [(ngModel)]="answer" name="answer">
+	</mat-form-field>
+	<br>
+	<input type="radio" name="radio" [(ngModel)]="radio" id="{{questions[questionNumber].first}}" value="{{questions[questionNumber].first}}">
+	<label for="{{questions[questionNumber].first}}">{{questions[questionNumber].first}}</label>
+	<br>
+	<input type="radio" name="radio" [(ngModel)]="radio" id="{{questions[questionNumber].second}}" value="{{questions[questionNumber].second}}">
+	<label for="{{questions[questionNumber].second}}">{{questions[questionNumber].second}}</label>
+	<br>
+-->
+
+
 <p class="coin-number">
-  <i class="material-icons">
-    attach_money
-  </i>
-  <span>{{coins}}</span>
+	<i class="material-icons">
+	attach_money
+	</i>
+	<span>{{coins}}</span>
 </p>
+
+<form (submit)="onSubmit(questionNumber)">
+	<mat-card class="card">
+		<mat-card-header>
+			<mat-card-title>{{questions[questionNumber].question}}</mat-card-title>
+			<mat-card-subtitle>Math</mat-card-subtitle>
+		</mat-card-header>
+
+		<mat-card-content>
+			<mat-radio-group
+			aria-labelledby="radio-group-label"
+			class="radio-group"
+			[(ngModel)]="answer"
+			name="answer"
+			>
+				<mat-radio-button class="radio-button" [value]="questions[questionNumber].first">
+					{{questions[questionNumber].first}}
+				</mat-radio-button>
+				<mat-radio-button class="radio-button" [value]="questions[questionNumber].second">
+					{{questions[questionNumber].second}}
+				</mat-radio-button>
+			</mat-radio-group>
+		</mat-card-content>
+		<mat-card-actions>
+			<button mat-raised-button color="accent" type="submit">Start</button>
+		</mat-card-actions>
+	</mat-card>
+</form>

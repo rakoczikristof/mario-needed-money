@@ -16,7 +16,7 @@ export class PlayComponent implements OnInit {
 		this.playerName = JSON.parse(localStorage.getItem("name"));
 		console.log("Player's name: %s", this.playerName);
 		
-		localStorage.setItem("coins", JSON.stringify(15));
+		
   	}
 
 	ngOnInit() {
