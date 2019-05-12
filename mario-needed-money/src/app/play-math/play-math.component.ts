@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { SessionManagerService } from '../session-manager.service';
 
 @Component({
   selector: 'app-play-math',
@@ -19,14 +20,39 @@ export class PlayMathComponent implements OnInit {
   router: Router;
 
   questions = [
-    { question: "First question?", first: "1976", second: "valami más", solution: "1976" },
-    { question: "First question?", first: "1976", second: "valami más", solution: "1976" },
-    { question: "First question?", first: "1976", second: "valami más", solution: "1976" }
+    {
+      question: "First question?",
+      optionA: "1976",
+      optionB: "valami más",
+      optionC: "harmadik",
+      optionD: "negyedik",
+      solution: "1976"
+    },
+    {
+      question: "First question?",
+      optionA: "1976",
+      optionB: "valami más",
+      optionC: "harmadik",
+      optionD: "negyedik",
+      solution: "1976"
+    },
+    {
+      question: "First question?",
+      optionA: "1976",
+      optionB: "valami más",
+      optionC: "harmadik",
+      optionD: "negyedik",
+      solution: "1976"
+    }
+   
   ];
 
-  constructor( _router: Router) {
+  constructor( _router: Router, private sessionManager: SessionManagerService) {
     this.router = _router;
-    this.coins = JSON.parse(localStorage.getItem("coins"));
+    this.coins = sessionManager.getCoins();
+    sessionManager.setWorld("Math");
+    sessionManager.setCurrentQuestionNumber(this.questionNumber+1);
+    sessionManager.setMaxQuestionsNumber(this.questions.length);
   }
 
   ngOnInit() {
@@ -40,9 +66,9 @@ export class PlayMathComponent implements OnInit {
 
     if(currentAnswer === this.questions[id].solution) {
         console.log("A megoldás jó.");
-        this.coins = JSON.parse(localStorage.getItem("coins")) + 10;
-        
-        localStorage.setItem("coins", JSON.stringify(this.coins));
+
+        this.coins = this.sessionManager.increaseCoins();
+
         console.log("Coins: " + this.coins);
 
     } else if(currentAnswer === undefined) {
@@ -61,7 +87,8 @@ export class PlayMathComponent implements OnInit {
     
 
     this.questionNumber++;
-    
+    this.sessionManager.setCurrentQuestionNumber(this.questionNumber+1);
+
     this.answer = "";
   }
 

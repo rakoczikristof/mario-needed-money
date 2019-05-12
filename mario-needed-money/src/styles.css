@@ -1,8 +1,19 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+@font-face {
+    font-family: 'arcadeclassicregular';
+    src: url('assets/fonts/arcadeclassic-webfont.woff2') format('woff2'),
+         url('assets/fonts/arcadeclassic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    
+
+}
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    word-spacing: 5px;
 }
 
 a {
@@ -14,7 +25,10 @@ a:hover {
     color: lightgrey;
 }
 
-body {
-    background-image: url('assets/images/mario-money.jpg');
+html {
+    background-image: url('assets/images/mario_bg.jpg');
     background-repeat: no-repeat;
+    background-size: cover ;
+    min-height: 100%;
+    font-family: 'arcadeclassicregular';
 }

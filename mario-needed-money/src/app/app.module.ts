@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PlayMathComponent } from './play-math/play-math.component';
 import { PlayComponent } from './play/play.component';
+import { PlayerInfoComponent } from './player-info/player-info.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { PlayComponent } from './play/play.component';
     NavComponent,
     HomeComponent,
     PlayMathComponent,
-    PlayComponent
+    PlayComponent,
+    PlayerInfoComponent
   ],
   imports: [
     BrowserModule,

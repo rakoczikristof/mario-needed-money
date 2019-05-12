@@ -16,18 +16,23 @@
 
 -->
 
+
+
 <form [formGroup]="nameForm" (ngSubmit)="onSubmit()">
-		<mat-form-field appearance="outline">
-				<mat-label>Name</mat-label>
-				<input matInput placeholder="Name" [formControl]="nameFormControl">
-				
-				<mat-error *ngIf="nameFormControl.hasError('minlength') && !nameFormControl.hasError('required')">
-				Your name should be more than <strong>{{minNameLength}}</strong> characters long!
-				</mat-error>
-				<mat-error *ngIf="nameFormControl.hasError('required')">
-				 	Name is <strong>required</strong>
-				</mat-error>
-	</mat-form-field>
+		<h1>It's-a me, Mario!</h1>
+		It's-a good thing you are here! I broke my dfuio dfu udfiu iodu ofd.
+		<input placeholder="Name" class="name-field" [formControl]="nameFormControl">
+			
+		<div class="error" *ngIf="nameFormControl.hasError('minlength') && !nameFormControl.hasError('required')">
+			Your name should be more than {{minNameLength}} characters long!
+		</div>
+		<div class="error" *ngIf="nameFormControl.hasError('required')">
+			Name is required
+		</div>
+		<div class="compliment" *ngIf="!nameFormControl.hasError('required') && !nameFormControl.hasError('minlength')">
+				Omg your name is so beautiful!
+		</div>
+
 	
-	<button mat-raised-button color="accent" type="submit">Start</button>
+	<input class="start-button" type="submit" value="Start">
 </form>

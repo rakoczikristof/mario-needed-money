@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { stringify } from '@angular/core/src/render3/util';
+import { SessionManagerService } from '../session-manager.service';
 
 @Component({
 	selector: 'app-play',
@@ -8,15 +9,14 @@ import { stringify } from '@angular/core/src/render3/util';
 })
 export class PlayComponent implements OnInit {
 
-	  playerName: string;
-
+	playerName: string;
+	coins: number;
 	
 
-	constructor() {
-		this.playerName = JSON.parse(localStorage.getItem("name"));
-		console.log("Player's name: %s", this.playerName);
-		
-		
+	constructor(private sessionManager: SessionManagerService) {
+		this.coins = sessionManager.getCoins();
+		this.playerName = sessionManager.getName();
+		sessionManager.resetGameInfo();
   	}
 
 	ngOnInit() {

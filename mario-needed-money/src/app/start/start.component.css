@@ -1,0 +1,58 @@
+* {
+	font-family: 'arcadeclassicregular';
+	font-size: 1.5em;
+}
+
+form {
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+h1 {
+	color: white;
+}
+
+.name-field {
+	
+	background: #FBD000;
+	width: 100%;
+	padding: 20px;
+	color: white;
+	border: 4px solid orange;
+	outline: none;
+}
+
+.name-field:focus {
+	border-color: darkorange;
+	
+}
+
+div {
+	color: white;
+	width: 100%;
+	padding: 10px;
+	font-size: 1em;
+}
+
+.error {
+	background: #E52521;
+}
+
+.compliment {
+	background: #43B047;
+}
+
+.start-button {
+	margin-top: 30px;
+	padding: 20px 40px;
+	background: red;
+	outline: none;
+	border: 2px solid darkred;
+	color: white;
+}
+
+.start-button:hover {
+	cursor: pointer;
+	background: orange;
+}
