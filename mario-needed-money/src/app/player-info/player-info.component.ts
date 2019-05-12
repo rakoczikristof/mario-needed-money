@@ -8,7 +8,7 @@ import { SessionManagerService } from '../session-manager.service';
 })
 export class PlayerInfoComponent implements OnInit {
 
-  constructor(private sessionManager: SessionManagerService) { }
+  constructor(sessionManager: SessionManagerService) { }
 
   ngOnInit() {
   }
