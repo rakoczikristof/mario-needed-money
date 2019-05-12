@@ -1,18 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
 import { SessionManagerService } from '../session-manager.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-play-math',
-  templateUrl: './play-math.component.html',
-  styleUrls: ['./play-math.component.css']
- 
+  selector: 'app-play-reading',
+  templateUrl: './play-reading.component.html',
+  styleUrls: ['./play-reading.component.css']
 })
-
-
-
-
-export class PlayMathComponent implements OnInit {
+export class PlayReadingComponent implements OnInit {
 
   questionNumber: number = 0;
   coins: number = 0;

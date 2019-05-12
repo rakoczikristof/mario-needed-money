@@ -1,0 +1,24 @@
+<app-player-info></app-player-info>
+
+<a routerLink="/play">Go back</a>
+
+<div class="question-card">
+	<form (submit)="onSubmit(questionNumber)">
+
+		<h1 class="question">{{questions[questionNumber].question}}</h1>
+
+		<input type="radio" value="{{questions[questionNumber].optionA}}" name="answer" [(ngModel)]="answer" id="id">
+		<label for="id">{{questions[questionNumber].optionA}}</label>
+		
+		<input type="radio" value="{{questions[questionNumber].optionB}}" name="answer" [(ngModel)]="answer" id="id2">
+		<label for="id2">{{questions[questionNumber].optionB}}</label>
+		
+		<input type="radio" value="{{questions[questionNumber].optionC}}" name="answer" [(ngModel)]="answer" id="id3">
+		<label for="id3">{{questions[questionNumber].optionC}}</label>
+
+		<input type="radio" value="{{questions[questionNumber].optionD}}" name="answer" [(ngModel)]="answer" id="id4">
+		<label for="id4">{{questions[questionNumber].optionD}}</label>
+
+		<input type="submit" class="submit-button"  value="Next">
+	</form>
+</div>

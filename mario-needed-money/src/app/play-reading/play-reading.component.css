@@ -1,0 +1,61 @@
+
+.radio-button {
+	display: block;
+	margin: 20px;
+}
+
+form button {
+	margin: 0 auto;
+	width: 200px;
+}
+
+.card {
+	margin: 0 auto;
+	width: 500px;
+}
+
+.question-card {
+	background: black;
+	width: 500px;
+	margin: 0 auto;
+	color: white;
+	padding: 10px;
+	border: 3px solid white;
+}
+
+.question-card input[type="radio"] {
+	visibility: hidden;
+}
+
+.question-card label {
+	background: #FBD000;
+	width: 100%;
+	display: block;
+	padding: 20px;
+	font-size: 1.3em;
+}
+.question-card label:hover {
+	background: orange;
+	cursor: pointer;
+}
+
+.question-card input[type="radio"]:checked + label {
+	background: orange;
+	font-weight: bold;
+}
+
+.submit-button {
+	border: none;
+	padding: 20px 40px;
+	background: #E52521;
+	color: white;
+	font-size: 1.3em;
+	font-family: 'arcadeclassicregular';
+	display: block;
+	margin: 10px auto 0 auto;
+}
+
+.submit-button:hover {
+	cursor: pointer;
+	background: darkred;
+}

@@ -46,9 +46,10 @@ div {
 .start-button {
 	margin-top: 30px;
 	padding: 20px 40px;
-	background: red;
+	background: #E52521;
 	outline: none;
-	border: 2px solid darkred;
+	border: none;
+	box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
 	color: white;
 }
 

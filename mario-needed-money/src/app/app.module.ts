@@ -12,6 +12,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PlayMathComponent } from './play-math/play-math.component';
 import { PlayComponent } from './play/play.component';
 import { PlayerInfoComponent } from './player-info/player-info.component';
+import { PlayReadingComponent } from './play-reading/play-reading.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { PlayerInfoComponent } from './player-info/player-info.component';
     HomeComponent,
     PlayMathComponent,
     PlayComponent,
-    PlayerInfoComponent
+    PlayerInfoComponent,
+    PlayReadingComponent
   ],
   imports: [
     BrowserModule,
