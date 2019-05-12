@@ -13,3 +13,8 @@ a {
 a:hover {
     color: lightgrey;
 }
+
+body {
+    background-image: url('assets/images/mario-money.jpg');
+    background-repeat: no-repeat;
+}

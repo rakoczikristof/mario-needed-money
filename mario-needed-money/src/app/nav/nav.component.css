@@ -1,8 +1,5 @@
-header {
-    width: 100%;
-    background: grey;
-    height: 50px;
-    text-align: center;
+.header {
+    background: #E52521;
 }
 
 .icon {
@@ -15,4 +12,8 @@ header {
   
   .spacer {
     flex: 1 1 auto;
+  }
+
+  img {
+    height: 50px;
   }
